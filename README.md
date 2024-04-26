@@ -28,15 +28,51 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+Step 1: Open Quartus II in your laptop.
+
+Step 2: Write code to implement SR flipflop using verilog and validating their functionality using their functional tables.
+
+Step 3: Run compilation to check for errors.
+
+Step 4: Open waveform output and load input values.
+
+Step 5: Run simulation to get the output.
+
+Step 6: Open in RTL viewers to get RTL diagram output.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: GANESH PRABHU J
+RegisterNumber: 212223220023
+```
+module TFLIPFLOPPOSEDGE( input clk, rst_n, input t,
+output reg q,
+output q_bar
+);
+always@(posedge clk) 
+begin 
+if(!rst_n)
+q<=0;
+else
+if(t)
+q<=~q;
+else
+q<=q;
+end
+assign q_bar = ~q;
+endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+
+![325666891-2d5aac8c-03f4-4950-a322-67980dc3b7c6](https://github.com/ganeshprabhu2005/T-FLIPFLOP-POSEDGE/assets/146162190/9ff605df-a5ff-4749-800d-3199782a50b2)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+
+![325666996-c436ce2d-e3d9-4759-b984-b199686e1edb](https://github.com/ganeshprabhu2005/T-FLIPFLOP-POSEDGE/assets/146162190/da4520af-a7c5-47b5-8573-6eb23fa3df61)
+
+
 **RESULTS**
+Hence, T flipflop using verilog and validating their functionality using their functional tables is implemented.
